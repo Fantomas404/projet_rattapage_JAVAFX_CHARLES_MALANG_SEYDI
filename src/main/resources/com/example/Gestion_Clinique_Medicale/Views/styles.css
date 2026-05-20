@@ -1,0 +1,287 @@
+/* ===== SIDEBAR ===== */
+.sidebar {
+    -fx-background-color: #1a202c;
+}
+
+.sidebar-logo-box {
+    -fx-background-color: #171e27;
+    -fx-padding: 18 16 14 16;
+    -fx-border-color: #2d3748;
+    -fx-border-width: 0 0 1 0;
+}
+
+.sidebar-logo-title {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+.sidebar-logo-subtitle {
+    -fx-font-size: 10px;
+    -fx-text-fill: #4a5568;
+}
+
+.sidebar-user-box {
+    -fx-background-color: #2d3748;
+    -fx-padding: 12 16 12 16;
+    -fx-border-color: #4a5568;
+    -fx-border-width: 0 0 1 0;
+}
+
+.sidebar-user-name {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e2e8f0;
+}
+
+.sidebar-user-role-admin {
+    -fx-font-size: 10px;
+    -fx-text-fill: #68d391;
+}
+
+.sidebar-user-role-medecin {
+    -fx-font-size: 10px;
+    -fx-text-fill: #90cdf4;
+}
+
+.sidebar-user-role-reception {
+    -fx-font-size: 10px;
+    -fx-text-fill: #f6ad55;
+}
+
+.sidebar-nav-label {
+    -fx-text-fill: #4a5568;
+    -fx-font-size: 9px;
+    -fx-font-weight: bold;
+    -fx-padding: 16 0 6 14;
+}
+
+/* ===== BOUTONS NAVIGATION ===== */
+.nav-btn {
+    -fx-background-color: transparent;
+    -fx-background-radius: 8;
+    -fx-border-color: transparent;
+    -fx-border-radius: 8;
+    -fx-border-width: 0;
+    -fx-cursor: hand;
+    -fx-padding: 0 12 0 12;
+    -fx-pref-height: 48;
+}
+
+.nav-btn:hover {
+    -fx-background-color: #2d3748;
+    -fx-background-radius: 8;
+}
+
+.nav-btn-label {
+    -fx-text-fill: #a0aec0;
+    -fx-font-size: 13px;
+}
+
+.nav-btn-sub {
+    -fx-text-fill: #4a5568;
+    -fx-font-size: 9px;
+}
+
+/* Actif ADMIN vert */
+.nav-btn-active-admin {
+    -fx-background-color: #276749;
+    -fx-background-radius: 8;
+}
+
+.nav-btn-active-admin .nav-btn-label {
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+.nav-btn-active-admin .nav-btn-sub {
+    -fx-text-fill: #9ae6b4;
+}
+
+/* Actif MEDECIN bleu */
+.nav-btn-active-medecin {
+    -fx-background-color: #2b4c7e;
+    -fx-background-radius: 8;
+}
+
+.nav-btn-active-medecin .nav-btn-label {
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+.nav-btn-active-medecin .nav-btn-sub {
+    -fx-text-fill: #90cdf4;
+}
+
+/* Actif RECEPTION orange */
+.nav-btn-active-reception {
+    -fx-background-color: #7b4f12;
+    -fx-background-radius: 8;
+}
+
+.nav-btn-active-reception .nav-btn-label {
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+.nav-btn-active-reception .nav-btn-sub {
+    -fx-text-fill: #f6ad55;
+}
+
+/* ===== DECONNEXION ===== */
+.logout-btn {
+    -fx-background-color: #742a2a;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 0 12 0 12;
+    -fx-pref-height: 44;
+}
+
+.logout-btn:hover {
+    -fx-background-color: #9b2c2c;
+}
+
+/* ===== TOPBAR ===== */
+.topbar {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 0 25 0 25;
+    -fx-pref-height: 58;
+}
+
+.topbar-title {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1a202c;
+}
+
+.topbar-subtitle {
+    -fx-font-size: 11px;
+    -fx-text-fill: #718096;
+}
+
+/* ===== CONTENU ===== */
+.content-area {
+    -fx-background-color: #f7fafc;
+}
+
+/* ===== TABLEVIEW ===== */
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 10;
+    -fx-border-width: 1;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f8fafc;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4a5568;
+    -fx-font-size: 12px;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #fafafa;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #ebf8ff;
+}
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: #f0fff4;
+}
+
+/* ===== BOUTONS ===== */
+.btn-green {
+    -fx-background-color: #276749;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 18;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-font-size: 13px;
+}
+.btn-green:hover { -fx-background-color: #2f855a; }
+
+.btn-blue {
+    -fx-background-color: #2b4c7e;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 18;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+.btn-blue:hover { -fx-background-color: #2c5282; }
+
+.btn-orange {
+    -fx-background-color: #c05621;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 18;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+.btn-orange:hover { -fx-background-color: #dd6b20; }
+
+.btn-red {
+    -fx-background-color: #9b2c2c;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 18;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+.btn-red:hover { -fx-background-color: #c53030; }
+
+/* ===== LOGIN ===== */
+.login-root {
+    -fx-background-color: linear-gradient(to bottom right, #1a202c, #276749);
+}
+
+.login-card {
+    -fx-background-color: white;
+    -fx-background-radius: 16;
+    -fx-padding: 40 48 40 48;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 30, 0, 0, 8);
+}
+
+.login-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1a202c;
+}
+
+.login-subtitle {
+    -fx-font-size: 12px;
+    -fx-text-fill: #718096;
+}
+
+.login-field {
+    -fx-background-color: #f7fafc;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 9 12;
+    -fx-font-size: 13px;
+    -fx-pref-width: 280px;
+}
+
+.login-field:focused {
+    -fx-border-color: #2f855a;
+    -fx-background-color: #f0fff4;
+}
+
+.login-btn {
+    -fx-background-color: #276749;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 11 0;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-pref-width: 280px;
+}
+.login-btn:hover { -fx-background-color: #2f855a; }

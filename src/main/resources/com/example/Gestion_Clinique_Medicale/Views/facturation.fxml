@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Gestion_Clinique_Medicale.Controller.FacturationController">
+    <padding><Insets bottom="20.0" left="20.0" right="20.0" top="20.0" /></padding>
+
+    <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1e3a5f;" text="Gestion de la Facturation" />
+
+    <HBox alignment="CENTER_LEFT" spacing="10.0">
+        <Region HBox.hgrow="ALWAYS" />
+        <Button onAction="#ouvrirFormulaireAjout" style="-fx-background-color: #1d4ed8; -fx-text-fill: white;                        -fx-font-weight: bold; -fx-padding: 8 20;                        -fx-background-radius: 6; -fx-cursor: hand;" text="Nouvelle Facture" />
+    </HBox>
+
+    <TableView fx:id="tableFactures" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId" prefWidth="50" text="ID" />
+            <TableColumn fx:id="colPatient" prefWidth="160" text="Patient" />
+            <TableColumn fx:id="colMontant" prefWidth="120" text="Montant (FCFA)" />
+            <TableColumn fx:id="colMode" prefWidth="130" text="Mode Paiement" />
+            <TableColumn fx:id="colDate" prefWidth="110" text="Date" />
+            <TableColumn fx:id="colStatut" prefWidth="100" text="Statut" />
+        </columns>
+        <placeholder><Label text="Aucune facture trouvée" /></placeholder>
+    </TableView>
+
+    <HBox alignment="CENTER_LEFT" spacing="10.0">
+        <Button onAction="#marquerPaye" style="-fx-background-color: #2563eb; -fx-text-fill: white;                        -fx-font-weight: bold; -fx-padding: 8 20;                        -fx-background-radius: 6; -fx-cursor: hand;" text="Marquer PAYÉ" />
+        <Button onAction="#genererFacturePdf" style="-fx-background-color: #0284c7; -fx-text-fill: white;                        -fx-font-weight: bold; -fx-padding: 8 20;                        -fx-background-radius: 6; -fx-cursor: hand;" text="Facture PDF" />
+    </HBox>
+</VBox>

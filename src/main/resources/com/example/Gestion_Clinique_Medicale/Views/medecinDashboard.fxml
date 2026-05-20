@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="680.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Gestion_Clinique_Medicale.Controller.MedecinDashboardController">
+
+    <left>
+        <VBox prefHeight="680.0" prefWidth="249.0" spacing="0" style="-fx-background-color: #1e3a5f;">
+
+            <VBox prefHeight="63.0" prefWidth="295.0" style="-fx-background-color: #172d4a; -fx-padding: 16 16 14 16;                          -fx-border-color: #2d5a9e; -fx-border-width: 0 0 1 0;">
+                <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="255.0" spacing="10.0">
+                    <Label style="-fx-font-size: 22px; -fx-text-fill: #7dd3fc;" text="⚕" />
+                    <VBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="176.0" spacing="1.0">
+                        <Label prefHeight="20.0" prefWidth="231.0" style="-fx-font-size: 14px; -fx-font-weight: bold;                                       -fx-text-fill: #ffffff;" text="CliniqueClinique Mère TheresaMedicale" />
+                    </VBox>
+                </HBox>
+            </VBox>
+
+            <VBox spacing="3.0" style="-fx-background-color: #243f68; -fx-padding: 12 16 12 16;                          -fx-border-color: #2d5a9e; -fx-border-width: 0 0 1 0;">
+                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                    <Label style="-fx-font-size: 20px;" />
+                    <VBox alignment="CENTER_LEFT" spacing="2.0">
+                        <Label fx:id="labelUtilisateur" style="-fx-font-size: 12px; -fx-font-weight: bold;                                       -fx-text-fill: #e2e8f0;" text="Bienvenue" />
+                        <Label fx:id="labelRole" style="-fx-font-size: 10px; -fx-text-fill: #7dd3fc;" text="MEDECIN" />
+                    </VBox>
+                </HBox>
+            </VBox>
+
+            <HBox fx:id="btnRendezVous" alignment="CENTER_LEFT" onMouseClicked="#ouvrirRendezVous" prefHeight="48.0" spacing="12.0" style="-fx-background-color: #dbeafe; -fx-cursor: hand;                          -fx-padding: 0 14 0 14;">
+                <Label style="-fx-font-size: 17px;" />
+                <VBox alignment="CENTER_LEFT">
+                    <Label style="-fx-text-fill: #1d4ed8; -fx-font-size: 13px;                                   -fx-font-weight: bold;" text="Rendez-vous" />
+                </VBox>
+            </HBox>
+
+            <HBox fx:id="btnConsultations" alignment="CENTER_LEFT" onMouseClicked="#ouvrirConsultations" prefHeight="48.0" spacing="12.0" style="-fx-background-color: transparent; -fx-cursor: hand;                          -fx-padding: 0 14 0 14;">
+                <Label style="-fx-font-size: 17px;" />
+                <VBox alignment="CENTER_LEFT">
+                    <Label style="-fx-text-fill: #94a3b8; -fx-font-size: 13px;" text="Consultations" />
+                </VBox>
+            </HBox>
+
+            <Region prefHeight="339.0" prefWidth="301.0" VBox.vgrow="ALWAYS" />
+            <Separator style="-fx-background-color: #2d5a9e;" />
+
+            <HBox alignment="CENTER_LEFT" onMouseClicked="#seDeconnecter" prefHeight="48.0" spacing="12.0" style="-fx-background-color: #243f68; -fx-cursor: hand;                          -fx-padding: 0 14 0 14;">
+                <VBox alignment="CENTER_LEFT">
+                    <Label style="-fx-text-fill: #93c5fd; -fx-font-size: 13px;                                   -fx-font-weight: bold;" text="Deconnexion" />
+                </VBox>
+            </HBox>
+
+            <HBox alignment="CENTER_LEFT" spacing="6.0" style="-fx-padding: 8 0 12 14; -fx-background-color: #1e3a5f;">
+                <Label style="-fx-font-size: 12px; -fx-text-fill: #334155;" text="⚕" />
+                <Label style="-fx-text-fill: #334155; -fx-font-size: 10px;" text="charles — GL3 2026" />
+            </HBox>
+
+        </VBox>
+    </left>
+
+    <center>
+        <VBox style="-fx-background-color: #f0f7ff;">
+            <HBox alignment="CENTER_LEFT" style="-fx-background-color: white; -fx-border-color: #bfdbfe;                          -fx-border-width: 0 0 1 0; -fx-padding: 0 25 0 25;                          -fx-pref-height: 58;">
+                <VBox alignment="CENTER_LEFT" spacing="1.0">
+                    <Label fx:id="lblTitrePage" style="-fx-font-size: 17px; -fx-font-weight: bold;                                   -fx-text-fill: #1e3a5f;" text="Mes Rendez-vous" />
+                    <Label style="-fx-font-size: 11px; -fx-text-fill: #64748b;" text="Clinique Mère Theresa" />
+                </VBox>
+            </HBox>
+            <StackPane fx:id="contenuPrincipal" style="-fx-background-color: #f0f7ff;" VBox.vgrow="ALWAYS" />
+        </VBox>
+    </center>
+
+</BorderPane>
