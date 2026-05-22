@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10.0"
+      xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.Gestion_Clinique_Medicale.Controller.RendezVousController">
+    <padding><Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/></padding>
+
+    <Label text="Gestion des Rendez-vous"
+           style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1e3a5f;"/>
+
+    <HBox spacing="10.0" alignment="CENTER_LEFT">
+        <Button text="Aujourd'hui" onAction="#afficherAujourdhui"
+                style="-fx-background-color: #2563eb; -fx-text-fill: white;
+                       -fx-padding: 8 16; -fx-background-radius: 6; -fx-cursor: hand;"/>
+        <Button text="Tous les RDV" onAction="#afficherTous"
+                style="-fx-background-color: #475569; -fx-text-fill: white;
+                       -fx-padding: 8 16; -fx-background-radius: 6; -fx-cursor: hand;"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="Nouveau RDV" onAction="#ouvrirFormulaireAjout"
+                style="-fx-background-color: #1d4ed8; -fx-text-fill: white;
+                       -fx-font-weight: bold; -fx-padding: 8 20;
+                       -fx-background-radius: 6; -fx-cursor: hand;"/>
+    </HBox>
+
+    <TableView fx:id="tableRdv" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId"      text="ID"           prefWidth="50"/>
+            <TableColumn fx:id="colPatient" text="Patient"      prefWidth="160"/>
+            <TableColumn fx:id="colMedecin" text="Médecin"      prefWidth="160"/>
+            <TableColumn fx:id="colDate"    text="Date / Heure" prefWidth="160"/>
+            <TableColumn fx:id="colStatut"  text="Statut"       prefWidth="120"/>
+        </columns>
+        <placeholder><Label text="Aucun rendez-vous trouvé"/></placeholder>
+    </TableView>
+
+    <HBox spacing="10.0" alignment="CENTER_LEFT">
+        <Button text="Modifier" onAction="#modifierRdv"
+                style="-fx-background-color: #0ea5e9; -fx-text-fill: white;
+                       -fx-font-weight: bold; -fx-padding: 8 20;
+                       -fx-background-radius: 6; -fx-cursor: hand;"/>
+        <Button text="Annuler RDV" onAction="#annulerRdv"
+                style="-fx-background-color: #64748b; -fx-text-fill: white;
+                       -fx-font-weight: bold; -fx-padding: 8 20;
+                       -fx-background-radius: 6; -fx-cursor: hand;"/>
+    </HBox>
+</VBox>
