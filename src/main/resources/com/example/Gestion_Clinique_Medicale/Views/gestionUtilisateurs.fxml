@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="15.0"
+      xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.Gestion_Clinique_Medicale.Controller.GestionUtilisateursController">
+    <padding><Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/></padding>
+
+    <Label text="Gestion des Utilisateurs (Medecins et Receptionistes)"           style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #1a202c;"/>
+    <HBox spacing="20.0"
+          style="-fx-background-color: white; -fx-padding: 16;
+                 -fx-background-radius: 10; -fx-border-color: #e2e8f0;
+                 -fx-border-radius: 10; -fx-border-width: 1;">
+
+        <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+            <Label text="Informations de l'utilisateur"
+                   style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #2d3748;"/>
+
+            <HBox spacing="10.0">
+                <VBox spacing="4.0">
+                    <Label text="Nom" style="-fx-font-size: 11px; -fx-text-fill: #4a5568;"/>
+                    <TextField fx:id="txtNom" promptText="Nom"
+                               style="-fx-pref-width: 150px; -fx-padding: 7 10;
+                                      -fx-border-color: #e2e8f0; -fx-border-radius: 6;
+                                      -fx-background-radius: 6;"/>
+                </VBox>
+                <VBox spacing="4.0">
+                    <Label text="Prenom" style="-fx-font-size: 11px; -fx-text-fill: #4a5568;"/>
+                    <TextField fx:id="txtPrenom" promptText="Prenom"
+                               style="-fx-pref-width: 150px; -fx-padding: 7 10;
+                                      -fx-border-color: #e2e8f0; -fx-border-radius: 6;
+                                      -fx-background-radius: 6;"/>
+                </VBox>
+                <VBox spacing="4.0">
+                    <Label text="Login" style="-fx-font-size: 11px; -fx-text-fill: #4a5568;"/>
+                    <TextField fx:id="txtLogin" promptText="Login"
+                               style="-fx-pref-width: 130px; -fx-padding: 7 10;
+                                      -fx-border-color: #e2e8f0; -fx-border-radius: 6;
+                                      -fx-background-radius: 6;"/>
+                </VBox>
+                <VBox spacing="4.0">
+                    <Label text="Mot de passe" style="-fx-font-size: 11px; -fx-text-fill: #4a5568;"/>
+                    <PasswordField fx:id="txtPassword" promptText="Mot de passe"
+                                   style="-fx-pref-width: 130px; -fx-padding: 7 10;
+                                          -fx-border-color: #e2e8f0; -fx-border-radius: 6;
+                                          -fx-background-radius: 6;"/>
+                </VBox>
+                <VBox spacing="4.0">
+                    <Label text="Role" style="-fx-font-size: 11px; -fx-text-fill: #4a5568;"/>
+                    <ComboBox fx:id="comboRole"
+                              style="-fx-pref-width: 150px;"/>
+                </VBox>
+            </HBox>
+
+            <Label fx:id="lblMessage" text=""
+                   style="-fx-font-size: 12px;"/>
+        </VBox>
+
+        <VBox spacing="8.0" alignment="BOTTOM_LEFT">
+            <Button text="Enregistrer" onAction="#enregistrer"
+                    style="-fx-background-color: #276749; -fx-text-fill: white;
+                           -fx-font-weight: bold; -fx-padding: 8 20;
+                           -fx-background-radius: 6; -fx-cursor: hand;
+                           -fx-pref-width: 130px;"/>
+            <Button text="Nouveau" onAction="#nouveau"
+                    style="-fx-background-color: #2b4c7e; -fx-text-fill: white;
+                           -fx-font-weight: bold; -fx-padding: 8 20;
+                           -fx-background-radius: 6; -fx-cursor: hand;
+                           -fx-pref-width: 130px;"/>
+            <Button text="Supprimer" onAction="#supprimer"
+                    style="-fx-background-color: #9b2c2c; -fx-text-fill: white;
+                           -fx-font-weight: bold; -fx-padding: 8 20;
+                           -fx-background-radius: 6; -fx-cursor: hand;
+                           -fx-pref-width: 130px;"/>
+        </VBox>
+    </HBox>
+
+    <TableView fx:id="tableUtilisateurs" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId"     text="ID"      prefWidth="50"/>
+            <TableColumn fx:id="colNom"    text="Nom"     prefWidth="150"/>
+            <TableColumn fx:id="colPrenom" text="Prenom"  prefWidth="150"/>
+            <TableColumn fx:id="colLogin"  text="Login"   prefWidth="130"/>
+            <TableColumn fx:id="colRole"   text="Role"    prefWidth="130"/>
+        </columns>
+        <placeholder><Label text="Aucun utilisateur trouve"/></placeholder>
+    </TableView>
+
+</VBox>

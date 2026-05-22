@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane prefHeight="500.0" prefWidth="420.0" style="-fx-background-color: #1e3a5f;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Gestion_Clinique_Medicale.Controller.LoginController">
+
+    <VBox alignment="CENTER" maxWidth="360.0" spacing="0" style="-fx-background-color: white;                  -fx-background-radius: 16;                  -fx-padding: 36 36 32 36;">
+
+        <HBox alignment="CENTER_LEFT" spacing="10.0" style="-fx-padding: 0 0 22 0;">
+            <VBox alignment="CENTER" style="-fx-background-color: #1e3a5f;                          -fx-background-radius: 10;                          -fx-min-width: 38; -fx-min-height: 38;                          -fx-max-width: 38; -fx-max-height: 38;">
+                <Label style="-fx-font-size: 16px; -fx-text-fill: white;" text="⚕" />
+            </VBox>
+            <VBox alignment="CENTER_LEFT" spacing="1.0">
+                <Label style="-fx-font-size: 13px; -fx-font-weight: bold;                               -fx-text-fill: #1e3a5f;" text="Clinique Mère Theresa" />
+            </VBox>
+        </HBox>
+
+        <Label style="-fx-font-size: 20px; -fx-font-weight: bold;                       -fx-text-fill: #1e3a5f; -fx-padding: 0 0 2 0;" text="Connexion" />
+        <Label style="-fx-font-size: 12px; -fx-text-fill: #64748b;                       -fx-padding: 0 0 20 0;" text="Connectez-vous à votre espace" />
+
+        <VBox spacing="5.0" style="-fx-padding: 0 0 12 0;">
+            <Label style="-fx-font-size: 12px; -fx-font-weight: bold;                           -fx-text-fill: #334155;" text="Identifiant" />
+            <TextField fx:id="loginField" promptText="Votre login" style="-fx-background-color: #f0f7ff;                               -fx-border-color: #bfdbfe;                               -fx-border-radius: 8;                               -fx-background-radius: 8;                               -fx-padding: 9 12;                               -fx-font-size: 13px;                               -fx-pref-width: 288px;" />
+        </VBox>
+
+        <VBox spacing="5.0" style="-fx-padding: 0 0 20 0;">
+            <Label style="-fx-font-size: 12px; -fx-font-weight: bold;                           -fx-text-fill: #334155;" text="Mot de passe" />
+            <PasswordField fx:id="passwordField" promptText="••••••••" style="-fx-background-color: #f0f7ff;                                   -fx-border-color: #bfdbfe;                                   -fx-border-radius: 8;                                   -fx-background-radius: 8;                                   -fx-padding: 9 12;                                   -fx-font-size: 13px;                                   -fx-pref-width: 288px;" />
+        </VBox>
+
+        <Label fx:id="errorLabel" maxWidth="288.0" style="-fx-text-fill: #c53030; -fx-font-size: 12px;                       -fx-padding: 0 0 8 0;" text="" wrapText="true" />
+
+        <Button defaultButton="true" onAction="#handleLogin" style="-fx-background-color: #2563eb;                        -fx-text-fill: white;                        -fx-font-size: 14px;                        -fx-font-weight: bold;                        -fx-padding: 11 0;                        -fx-background-radius: 8;                        -fx-cursor: hand;                        -fx-pref-width: 288px;" text="Se connecter">
+        </Button>
+
+    </VBox>
+</StackPane>
